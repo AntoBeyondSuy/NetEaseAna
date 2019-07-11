@@ -25,6 +25,9 @@ public class ApiCalls {
         }
     }
 
+    /**
+     * 获取热门歌手榜
+     */
     public static void singerRankAPI() {
         JSONObject jsonObject = HttpRequests.sendGet("http://localhost:3000/toplist/artist",
                 "");
@@ -44,6 +47,15 @@ public class ApiCalls {
     }
 
     public static void main(String[] args) {
-        ApiCalls.singerRankAPI();
+//        ApiCalls.singerRankAPI();
+        String[] target = {"Spinnin' Best Of 2017","aaaaaa","sdasdasd'asdasda"};
+        for (String t : target) {
+            if (t.contains("'")) {
+                String a = t.replace("'", "\\'");
+                System.out.println(a);
+            }
+
+        }
     }
+
 }
