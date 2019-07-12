@@ -31,7 +31,7 @@ public class Prediction {
         }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入用户ID：");
+        System.out.println("请输入用户ID：(此处输入了16046004)");
 //        int userId = scanner.nextInt();
         int userId = 16046004;
 
@@ -43,7 +43,6 @@ public class Prediction {
             System.out.println("label=" + label);
             SongList songList = getSongList(label);
             System.out.println(songList.getListName());
-
         }
 
         // 关闭资源
