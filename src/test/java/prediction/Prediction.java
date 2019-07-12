@@ -125,6 +125,11 @@ public class Prediction {
         return list;
     }
 
+    /**
+     * 根据用户ID，获取该用户听歌的标签
+     * @param userId
+     * @return
+     */
     private static String[] getLabels(int userId) {
         String sql = "SELECT id_user,name_user,label_1,label_2,label_3,label_4,label_5 " +
                 "FROM SongLists.user " +
@@ -134,6 +139,11 @@ public class Prediction {
         return user.getLabels();
     }
 
+    /**
+     * 根据标签，获取包含改标签的歌单
+     * @param label
+     * @return
+     */
     private static SongList getSongList(String label) {
         String sql = "SELECT id_list,name_list,label_1,label_2,label_3,label_4,label_5 " +
                 "FROM SongLists.list " +
